@@ -17,8 +17,12 @@ std::string clasificarImc(double imc) {
     return "Obesidad";
 }
 
+double librasAKilogramos(double libras) {
+    return libras * 0.4536;
+}
+
 int main() {
-    double peso, estatura;
+    double peso, estatura, libras;
 
     std::cout << "Peso (kg): ";
     std::cin >> peso;
@@ -31,6 +35,13 @@ int main() {
     std::cout << "IMC: " << imc
               << " (" << clasificarImc(imc)
               << ")" << std::endl;
+
+    std::cout << "Peso en libras: ";
+    std::cin >> libras;
+
+    std::cout << "Peso en kilogramos: "
+              << librasAKilogramos(libras)
+              << std::endl;
 
     return 0;
 }
